@@ -1,7 +1,7 @@
 #include <iostream>
-#include <iostream>
-#include <iostream>
-#include <iostream>
+#include <fstream>
+#include <ctime>
+#include <cmath>
 #define file "elenco.txt"
 
 using namespace std;
