@@ -61,6 +61,51 @@ fout.close();
 
 }
 
+void p_vin(){
+    int vetd[10], z=0;
+    int segno=0, x1, x2, y1, y2, d=0;
+
+    for(int m=0; m<n; m++){
+            for(int v=0; v<15; v++){
+                for(int i=0; i<4; i++){
+
+                    if(i==0){
+                        x1=vetc[segno];
+                        segno++;
+
+                    }
+                    if(i==1){
+                        y1=vetc[segno];
+                        segno++;
+
+                    }
+                    if(i==2){
+                        x2=vetc[segno];
+                        segno++;
+
+                    }
+                    if(i==3){
+                        y2=vetc[segno];
+                        segno++;
+
+                    }
+
+
+                }
+
+                d=d+sqrt((y1-y2)*(y1-y2)+(x1-x2)*(x1-x2));
+            }
+
+        vetd[z]=d;
+        cout<<d<<endl;
+        z++;
+    }
+
+
+
+
+}
+
 void menu(){
 
 int s;
@@ -80,7 +125,12 @@ do{
             inserimento_part();
             break;
 
-    }
+
+        case 2:
+            p_vin();
+            break;
+
+        }
     }while(s!=3);
 }
 
