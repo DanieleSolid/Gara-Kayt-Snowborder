@@ -15,7 +15,7 @@ int mat=0, cord=0, cont=0, cont2=0;
 int z=0;
 int segno=0, x1, x2, y1, y2, d=0;
 string cognome;
-srand(time(NULL));
+
 
 ofstream fout (file);
 cout<<"Quanti partecipanti vuoi inserire?"<<endl;
@@ -89,8 +89,9 @@ for(int v=1;v<=n; v++){
             }
 
         vetd[z]=d;
-        cout<<vetd[z]<<endl;
+        cout<<"Distanza percorsa: "<<vetd[z]<<endl;
         z++;
+        d=0;
 
 }
 
@@ -118,6 +119,7 @@ string maggiore;
     }
 
         cout<<"Il vicitore è: "<<maggiore<<endl;
+        maggiore="";
 
 }
 
@@ -128,7 +130,7 @@ int s;
 do{
     cout<<"MENU"<<endl;
     cout<<"1- Inserisci partecipanti"<<endl;
-    cout<<"2- Podio vincente"<<endl;
+    cout<<"2- Vincitore"<<endl;
     cout<<"3- Uscita"<<endl;
 
     cout<<"Scegli una voce: "<<endl;
@@ -154,6 +156,7 @@ do{
 
 int main()
 {
+    srand(time(NULL));
     menu();
     return 0;
 }
