@@ -12,6 +12,8 @@ int n;
 void inserimento_part(){
 
 int mat=0, cord=0, cont=0, cont2=0;
+int vetd[10], z=0;
+int segno=0, x1, x2, y1, y2, d=0;
 string cognome;
 srand(time(NULL));
 
@@ -53,20 +55,10 @@ for(int v=1;v<=n; v++){
             }
 
         }
+        cont=0;
         fout<<endl;
 
-}
-
-fout.close();
-
-}
-
-void p_vin(){
-    int vetd[10], z=0;
-    int segno=0, x1, x2, y1, y2, d=0;
-
-    for(int m=0; m<n; m++){
-            for(int v=0; v<15; v++){
+        for(int v=0; v<15; v++){
                 for(int i=0; i<4; i++){
 
                     if(i==0){
@@ -93,13 +85,20 @@ void p_vin(){
 
                 }
 
-                d=d+sqrt((y1-y2)*(y1-y2)+(x1-x2)*(x1-x2));
+                d=abs(d+sqrt((y1-y2)*(y1-y2)+(x1-x2)*(x1-x2)));
             }
 
         vetd[z]=d;
-        cout<<d<<endl;
+        cout<<vetd[z]<<endl;
         z++;
-    }
+
+}
+
+fout.close();
+
+}
+
+void p_vin(){
 
 
 
@@ -133,6 +132,9 @@ do{
         }
     }while(s!=3);
 }
+
+
+
 
 int main()
 {
