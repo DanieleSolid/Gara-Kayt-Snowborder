@@ -5,14 +5,14 @@
 #define file "elenco.txt"
 
 using namespace std;
-int vetc[60];
+int vetc[60], vetd[10];
 string vetp[10];
 int n;
 
 void inserimento_part(){
 
 int mat=0, cord=0, cont=0, cont2=0;
-int vetd[10], z=0;
+int z=0;
 int segno=0, x1, x2, y1, y2, d=0;
 string cognome;
 srand(time(NULL));
@@ -99,9 +99,25 @@ fout.close();
 }
 
 void p_vin(){
+int cm=0;
+string maggiore;
+    for(int v=0; v<n; v++){
+        for(int p=0; p<n; p++){
+              if(vetd[v]>vetd[p]){
+                cm++;
 
+              }
 
+            }
+            if(cm==n-1){
+                    maggiore=vetp[v];
+                    v=n;
 
+            }else{cm=0;}
+
+    }
+
+        cout<<"Il vicitore è: "<<maggiore<<endl;
 
 }
 
