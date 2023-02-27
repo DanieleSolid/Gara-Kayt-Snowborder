@@ -1,3 +1,10 @@
+/*!
+    \file main.cpp
+    \author Daniele Solidoro
+    \version 1.0
+    \brief simula una gara di kayt-snowboarding restituendo il vincitore
+*/
+
 #include <iostream>
 #include <fstream>
 #include <ctime>
@@ -9,6 +16,10 @@ int vetc[60], vetd[10];
 string vetp[10];
 int n;
 
+/*!
+    \fn inserimento_part
+    \brief inserisce all'interno del file i partecipanti e le loro distanze in un vettore, infine stampa tali distanze per ogni partecipante
+*/
 void inserimento_part(){
 
 int mat=0, cord=0, cont=0, cont2=0;
@@ -99,6 +110,10 @@ fout.close();
 
 }
 
+/*!
+    \fn p_vin
+    \brief trova il punteggio migliore tra le distanze salvate all'interno del vettore
+*/
 void p_vin(){
 int cm=0;
 string maggiore;
@@ -123,6 +138,10 @@ string maggiore;
 
 }
 
+/*!
+    \fn menu
+    \brief mette a disposizione un menu all'interno della quale puoi scegliere un'opzione
+*/
 void menu(){
 
 int s;
@@ -152,8 +171,10 @@ do{
 }
 
 
-
-
+/*!
+    \fn main
+    \brief richiama la funzione menu che contiene tutte le funzionalità del programma
+*/
 int main()
 {
     srand(time(NULL));
